@@ -1,0 +1,32 @@
+@import "~bulma/bulma.sass";
+
+.wr-signup-form {
+    max-width: 380px;
+    margin: 0 auto;
+}
+  
+#wr-signout-button {
+    font-size: 0.875rem;
+    width: 100%;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+#wr-signout-button:hover {
+  background-color: whitesmoke;
+  color: #0a0a0a;
+}
+
+.navbar-item img {
+    max-height: 2rem;
+}
+
+.navbar-end svg {
+  height: 32px;
+}
+
+.navbar-burger {
+  margin-left: 0;
+}
