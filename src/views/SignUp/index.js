@@ -4,14 +4,14 @@ import { Link, Redirect } from "react-router-dom";
 import { useFirebase } from "../../contexts/firebase-context";
 import { useUser } from "../../contexts/user-context";
 import { baseUrl, signInUrl } from "../../routes/constants";
-import { SignUpForm } from "../../components";
+import { SignUpForm, Spinner } from "../../components";
 
 const SignUp = props => {
   const { firebase } = useFirebase();
   const { user, initializing } = useUser();
 
   if (initializing) {
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
   if (user) {
     return <Redirect to={baseUrl} />;

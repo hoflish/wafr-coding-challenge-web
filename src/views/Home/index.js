@@ -3,12 +3,13 @@ import { Redirect } from "react-router-dom";
 
 import { useUser } from "../../contexts/user-context";
 import { signInUrl } from "../../routes/constants";
+import { Spinner } from "../../components";
 
 const Home = props => {
   const { user, initializing } = useUser();
 
   if (initializing) {
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
   if (!user) {
     return <Redirect to={signInUrl} />;
